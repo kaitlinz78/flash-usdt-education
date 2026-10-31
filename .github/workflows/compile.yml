@@ -22,3 +22,16 @@ jobs:
         run: npm install --no-audit --no-fund
       - name: Compile contract
         run: npm run compile
+      - name: Verify compiled ABI and bytecode
+        run: npm run check
+      - name: Create flattened Solidity source for TronIDE
+        run: npx tronbox flatten contracts/FlashUsdtDemo.sol > FlashUsdtDemo.flattened.sol
+      - name: Attach downloadable build files
+        uses: actions/upload-artifact@v4
+        with:
+          name: tron-demo-contract-build
+          path: |
+            build/contracts/FlashUsdtDemo.json
+            FlashUsdtDemo.flattened.sol
+          if-no-files-found: error
+          retention-days: 30
