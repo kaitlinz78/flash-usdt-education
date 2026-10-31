@@ -20,6 +20,14 @@ This project prepares a **real**, fixed-supply TRC20 demonstration token named `
 - `package.json` — pinned dependencies and compile command.
 - `.github/workflows/compile.yml` — compile check on GitHub (no wallet connections or deployment).
 
+## One-click GitHub build and wallet deployment
+
+1. Open [Actions](https://github.com/kaitlinz78/flash-usdt-education/actions) to check the **Compile educational TRC20** workflow.
+2. Download the compiled artifact including a **flattened Solidity source for TronIDE** from a successful run.
+3. Follow the [wallet deployment and Trust Wallet transfer guide](docs/DEPLOY_AND_TRANSFER.md).
+
+The compilation workflow **does not deploy contracts**. Signing and paying TRX fees always require your wallet approval.
+
 ## Compile (on Mac)
 
 Install Node.js 20 or newer, clone/download the repository, then run:
