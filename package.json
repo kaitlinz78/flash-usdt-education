@@ -4,7 +4,8 @@
   "private": true,
   "description": "Clearly labeled educational TRC20 token, not genuine Tether USDT",
   "scripts": {
-    "compile": "tronbox compile"
+    "compile": "tronbox compile",
+    "check": "node scripts/check-artifact.js"
   },
   "dependencies": {
     "@openzeppelin/tron-contracts": "5.6.0",
